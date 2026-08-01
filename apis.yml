@@ -1,8 +1,30 @@
 aid: storecash
 name: StoreCash
-description: StoreCash is a company surfaced as a portfolio company of techstars and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  StoreCash, operated by G Cards, Inc., is a Los Angeles-based cashback and
+  payments company whose mobile app (iOS and Android) lets shoppers earn instant,
+  unlimited cashback on everyday purchases at hundreds of online and in-store
+  retailers. Users buy a store card for a purchase amount, receive cashback
+  immediately, then redeem the digital card at checkout like a gift card. The
+  product works with debit and credit cards, stacks with existing store promos,
+  and offers sign-up, referral, and birthday bonuses under a free-trial-then-
+  subscription model. StoreCash also markets a plug-and-play cashback API to
+  businesses and banks to power their own loyalty and engagement, though that
+  B2B API is contact-sales only and not publicly documented. The public website
+  is Wix-hosted and exposes a Wix Site MCP endpoint for agentic AI access.
 url: https://raw.githubusercontent.com/api-evangelist/storecash/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://static.wixstatic.com/media/9fcfab_db730e80885e4019b5bb52110e3deb09~mv2.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,9 +33,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Cashback
+- Rewards
+- Payments
+- Fintech
+- Loyalty
+- Consumer Finance
+- Mobile App
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +52,22 @@ maintainers:
 common:
 - type: Website
   url: https://storecashapp.com/
+- type: Blog
+  url: https://www.storecashapp.com/blog
+- type: Support
+  url: https://support.storecashapp.com/hc/en-us
+- type: TermsOfService
+  url: https://www.storecashapp.com/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://www.storecashapp.com/privacy-policy
+- type: MCPServer
+  url: mcp/storecash-mcp.yml
+- type: LLMsTxt
+  url: llms/storecash-llms.txt
+- type: DomainSecurity
+  url: security/storecash-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 4
+  pass: local-v1

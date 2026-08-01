@@ -1,0 +1,37 @@
+generated: '2026-07-21'
+method: searched
+status: published
+source: https://storecashapp.com/llms.txt
+notes: >-
+  StoreCash's public website (storecashapp.com, operated by G Cards, Inc.) is
+  built on Wix and exposes a Wix Site MCP endpoint advertised in the site's
+  /llms.txt. The MCP server exposes public site content and Wix business-solution
+  APIs installed on the site (business details, site search, product/service
+  discovery, bookings, and visitor-scoped purchase flows). This is the Wix Site
+  MCP, not a first-party StoreCash cashback API; StoreCash's own B2B "plug and
+  play cashback API" is not publicly documented (contact-sales only).
+server:
+  name: storecash-site
+  transport: http
+  url: https://www.storecashapp.com/_api/mcp
+  auth: none
+  auth_notes: >-
+    No authentication required to connect; only public site information is
+    accessible. Visitor-scoped API calls require a visitor token obtained via
+    GenerateVisitorToken.
+  docs: https://dev.wix.com/docs/develop-websites/articles/get-started/about-the-wix-site-mcp
+tools:
+- name: GetBusinessDetails
+  description: Retrieves business and site details such as timezone, email, phone, and address.
+- name: SearchInSite
+  description: Searches the site for information.
+- name: SearchSiteApiDocs
+  description: Retrieves the API documentation for the Wix business solutions installed on the site.
+- name: GenerateVisitorToken
+  description: Creates a new visitor session and obtains a visitor access token for the site.
+- name: CallWixSiteAPI
+  description: Calls API methods on the site to perform actions on a visitor's behalf (query data, book, start a purchase).
+- name: ReadFullDocsArticle
+  description: Fetches a complete article from the Wix developer documentation portal.
+- name: ReadFullDocsMethodSchema
+  description: Fetches the full schema for a Wix API method before calling it.
