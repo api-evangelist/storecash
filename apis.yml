@@ -13,6 +13,17 @@ description: >-
   B2B API is contact-sales only and not publicly documented. The public website
   is Wix-hosted and exposes a Wix Site MCP endpoint for agentic AI access.
 url: https://raw.githubusercontent.com/api-evangelist/storecash/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
