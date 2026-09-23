@@ -2,19 +2,24 @@ generated: '2026-07-21'
 method: searched
 source: live probe of /.well-known/* on storecashapp.com hosts
 host: https://www.storecashapp.com
-notes: >-
-  No standard /.well-known/ discovery documents are published. The Wix-hosted
-  origin returns HTTP 400 for all probed well-known paths. Agent-access
-  discovery is instead published at /llms.txt (captured in llms/), which
-  advertises a Wix Site MCP endpoint.
-documents:
-- path: /.well-known/security.txt
-  status: 400
-- path: /.well-known/openid-configuration
-  status: 400
-- path: /.well-known/oauth-authorization-server
-  status: 400
-- path: /.well-known/api-catalog
-  status: 400
-- path: /.well-known/ai-plugin.json
-  status: 400
+notes: No standard /.well-known/ discovery documents are published. The Wix-hosted origin returns HTTP
+  400 for all probed well-known paths. Agent-access discovery is instead published at /llms.txt (captured
+  in llms/), which advertises a Wix Site MCP endpoint.
+hosts:
+- host: https://www.storecashapp.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 400
+  - path: /.well-known/openid-configuration
+    status: 400
+  - path: /.well-known/oauth-authorization-server
+    status: 400
+  - path: /.well-known/api-catalog
+    status: 400
+  - path: /.well-known/ai-plugin.json
+    status: 400
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
